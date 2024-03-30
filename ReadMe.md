@@ -1,7 +1,6 @@
 
 ## Changes from A2a to A2b
 
----
 In the previous version of the program (A2a), the logic for interactions between entities (Herbivores, Plants) was encapsulated within the `World` class. This design sufficed when dealing with only two types of organisms. However, with the introduction of Carnivores and Omnivores, the existing approach becomes repetitive and lacks modularity.
 
 In the updated version (A2b), the main change is the decentralization of logic. Rather than having all interaction logic in the `World` class, each individual organism class (Herbivore, Plant, Carnivore, Omnivore) now contains its own behavior logic. This change leads to a more modular and scalable design, where each entity is responsible for its own actions and interactions.
@@ -21,7 +20,6 @@ Overall, by moving the logic from the `World` class to individual organism class
 
 # Program Overview:
 
----
 The **PreyVsPredators** program simulates the behavior of preys and predators within a grid-based ecosystem. Each entity in the simulation is represented by a distinct color and possesses basic functionalities common to all living things.
 
 ### Runs Program
@@ -40,7 +38,6 @@ The **PreyVsPredators** program simulates the behavior of preys and predators wi
 4. `Omnivores`
 ## Runs Program
 
----
 ### Launcher Class Overview
 
 The `Launcher` class is responsible for starting the Preys Vs Predators game. When the program is executed, the `main` method of the `Launcher` class is invoked automatically. It creates a new instance of the `Game` class, which in turn initializes the graphical user interface and begins the simulation.
@@ -49,14 +46,12 @@ The `Launcher` class is responsible for starting the Preys Vs Predators game. Wh
 
 To start the Plants Vs Herbivores game, simply execute the `Launcher` class. This can be done from the command line or within an integrated development environment (IDE) by running the program. Upon execution, the game window will appear, and the simulation will begin automatically.
 
----
 ### Game Class Overview
 
 The `Game` class serves as the entry point for the simulation. It creates and manages the `World` object, which contains the logic for the simulation. The graphical user interface allows users to interact with the simulation by clicking on the window.
 
 When the user clicks on the window, the `Game` class triggers a repaint, which updates the graphical representation of the world to reflect any changes that may have occurred due to the simulation logic.
 
----
 ### GUI Class Overview
 
 The `GUI` class displays a grid-based representation of the simulation world. Each cell in the grid represents a location in the world, and its color indicates the type of resident (plant, herbivore, carnivore, or omnivore) occupying that location.
@@ -68,7 +63,6 @@ Users can interact with the GUI by clicking on the panel. When a click event occ
 To use the `GUI` class, instantiate it with the desired number of rows, columns, and a `World` object representing the simulation world. The GUI will automatically render the world and respond to user interactions by updating the world state.
 ## Simulated Entities
 
----
 ### Common Properties:
 All entities in the simulation inherit from the `LivingThing` abstract class, which defines the following properties:
 - `color`: A string indicating the color of the entity.
@@ -90,7 +84,6 @@ All entities in the simulation inherit from the `LivingThing` abstract class, wh
 - Methods marked with asterisks (*) denote functionalities specific organisms other than `Plant`.
 - The program follows a grid-based approach, where entities interact with neighboring cells based on specific rules and conditions.
 
----
 ### Plant Class
 The `Plant` class represents a plant in the ecosystem. Plants serve as food sources for herbivores and omnivores.
 
@@ -106,7 +99,6 @@ The `Omnivore` class represents an omnivorous living thing in the ecosystem. Omn
 
 ## Simulated Environment
 
----
 ### World Class Overview
 
 The `World` class serves as the environment where interactions between different organisms occur. It creates and manages the grid of lands where organisms reside and facilitates their actions and behaviors.
@@ -135,7 +127,6 @@ The `World` class encapsulates the behavior of the simulated ecosystem, orchestr
 
 To use the `World` class, instantiate a `World` object with the desired width and height. Then, call the `runWorld()` method to execute the simulation for a single iteration. Repeat this process as needed to observe the evolution of the ecosystem over multiple iterations.
 
----
 ### Land Class Overview
 
 The `Land` class represents a single unit of space within the world grid where organisms reside. It encapsulates the information about the current resident organism, the future resident organism (after performing actions), and provides methods to interact with these residents.
