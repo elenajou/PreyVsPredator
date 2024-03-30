@@ -44,7 +44,6 @@ public class Carnivore extends LivingThing implements OmniFood {
                     // land cannot be null, while resident can be null
                     if (currentLand != null && currentLand.getResident() == null) {
                         currentLand.setFutureResident(new Carnivore());
-                        System.out.println("carnivore gave birth");
                         break outerloop;
                     }
                 }

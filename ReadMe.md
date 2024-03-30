@@ -15,6 +15,8 @@ Here's how the changes in the `World` class reflect this:
 
 4. **Future Resident Update**: After all actions are performed, the `runWorld()` method updates each land's resident based on their future state, ensuring that all changes take effect simultaneously.
 
+Additionally, one significant change is the introduction of the `CarnFood`, `HerbEater`, `HerbFood` and `OmniFood` interfaces. These interfaces are implemented by classes that represent organisms capable of being consumed by other organisms for sustenance. By introducing this interface, the codebase becomes more modular and extensible, allowing for better organization of behaviors and clearer delineation of responsibilities among different types of organisms.  
+
 Overall, by moving the logic from the `World` class to individual organism classes, the program becomes more modular, maintainable, and extensible, allowing for easier addition of new organism types and behaviors in future updates.
 
 
@@ -36,6 +38,12 @@ The **PreyVsPredators** program simulates the behavior of preys and predators wi
 2. `Herbivores`
 3. `Carnivores`
 4. `Omnivores`
+
+### Interfaces
+1. `CarnFood`
+2. `HerbEater`
+3. `HerbFood`
+4. `OmniFood`
 ## Runs Program
 
 ### Launcher Class Overview
